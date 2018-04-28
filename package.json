@@ -9,10 +9,13 @@
     "webpack": "webpack -w",
     "webpack:production": "NODE_ENV=production webpack"
   },
-  "keywords": [
-    "BuckleScript"
-  ],
-  "author": "",
+  "keywords": ["react", "styleguide", "prismjs", "html", "BuckleScript"],
+  "main": "src/HoverSource.bs.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ulrikstrid/react-hover-source.git"
+  },
+  "author": "Ulrik Strid",
   "license": "MIT",
   "dependencies": {
     "bs-webapi": "^0.9.1",
