@@ -3375,6 +3375,16 @@ rc@^1.1.7:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
+react-listener-provider@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/react-listener-provider/-/react-listener-provider-0.2.0.tgz#fb6ce123f9e20ad948f75906ddf647db1df31f18"
+
+"react-perimeter@https://github.com/ulrikstrid/react-perimeter.git":
+  version "0.4.0"
+  resolved "https://github.com/ulrikstrid/react-perimeter.git#5a27658988bc63921022a2373a86e404101eac91"
+  optionalDependencies:
+    react-listener-provider "^0.2.0"
+
 "react@>=15.0.0 || >=16.0.0", react@^16.2.0:
   version "16.3.2"
   resolved "https://registry.yarnpkg.com/react/-/react-16.3.2.tgz#fdc8420398533a1e58872f59091b272ce2f91ea9"

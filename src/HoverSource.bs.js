@@ -7,6 +7,8 @@ import * as Prismjs from "prismjs";
 import * as ReasonReact from "reason-react/src/ReasonReact.js";
 import * as HtmlBeautify from "html-beautify";
 import * as Server from "react-dom/server";
+import * as Fragment$ReactTemplate from "./Fragment.bs.js";
+import * as ReactPerimiter$ReactTemplate from "./ReactPerimiter.bs.js";
 
 var component = ReasonReact.reducerComponent("HoverSource");
 
@@ -41,34 +43,30 @@ function make(children) {
           /* render */(function (self) {
               var match = self[/* state */1][/* show */0];
               var display = match ? "block" : "none";
-              var match$1 = self[/* state */1][/* outline */1];
-              var outline = match$1 ? "0 0 3px 3px rgba(135,206,235,0.6)" : "none";
-              return React.createElement("div", {
-                          style: {
-                            boxShadow: outline,
-                            transition: "box-shadow 1s ease-in-out"
-                          },
-                          onMouseOut: (function () {
-                              return Curry._1(self[/* send */3], /* Toggle */0);
-                            }),
-                          onMouseOver: (function () {
-                              return Curry._1(self[/* send */3], /* Toggle */0);
-                            })
-                        }, React.createElement("pre", {
-                              className: "language-html",
-                              style: {
-                                border: "2px solid black",
-                                display: display,
-                                padding: "10px",
-                                position: "fixed",
-                                top: "40px",
-                                zIndex: "10"
-                              }
-                            }, React.createElement("code", {
-                                  dangerouslySetInnerHTML: {
-                                    __html: Prismjs.highlight(HtmlBeautify(Server.renderToStaticMarkup(children)), Prismjs.languages.html)
-                                  }
-                                })), children);
+              return ReasonReact.element(/* None */0, /* None */0, Fragment$ReactTemplate.make(/* array */[
+                              ReasonReact.element(/* None */0, /* None */0, ReactPerimiter$ReactTemplate.make(0, (function () {
+                                          return Curry._1(self[/* send */3], /* Toggle */0);
+                                        }), (function () {
+                                          return Curry._1(self[/* send */3], /* Toggle */0);
+                                        }), children)),
+                              React.createElement("pre", {
+                                    className: "language-html",
+                                    style: {
+                                      border: "2px solid black",
+                                      display: display,
+                                      padding: "10px",
+                                      position: "fixed",
+                                      top: "40px",
+                                      zIndex: "10"
+                                    }
+                                  }, React.createElement("code", {
+                                        dangerouslySetInnerHTML: {
+                                          __html: Prismjs.highlight(HtmlBeautify(Server.renderToStaticMarkup(Curry._1(children, (function () {
+                                                              return /* () */0;
+                                                            })))), Prismjs.languages.html)
+                                        }
+                                      }))
+                            ]));
             }),
           /* initialState */(function () {
               return /* record */[
@@ -99,8 +97,11 @@ var $$default = ReasonReact.wrapReasonForJs(component, (function (jsProps) {
         return make(jsProps.children);
       }));
 
+var nullRef = null;
+
 export {
   component ,
+  nullRef ,
   make ,
   $$default ,
   $$default as default,

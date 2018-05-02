@@ -2,12 +2,13 @@
 
 import * as React from "react";
 import * as ReasonReact from "reason-react/src/ReasonReact.js";
-import * as Menu$ReactTemplate from "./Menu.bs.js";
-import * as HoverSource$ReactTemplate from "../HoverSource.bs.js";
 
-var component = ReasonReact.statelessComponent("App");
+var component = ReasonReact.statelessComponent("Menu");
 
-function make() {
+function make($staropt$star, _) {
+  var ref = $staropt$star ? $staropt$star[0] : (function () {
+        return /* () */0;
+      });
   return /* record */[
           /* debugName */component[/* debugName */0],
           /* reactClassInternal */component[/* reactClassInternal */1],
@@ -20,16 +21,14 @@ function make() {
           /* shouldUpdate */component[/* shouldUpdate */8],
           /* render */(function () {
               return React.createElement("div", {
+                          ref: ref,
                           style: {
-                            display: "grid",
-                            gridTemplateColumns: "1fr 5fr",
-                            gridTemplateRows: "60px 1fr"
+                            background: "indianred",
+                            display: "inline-block",
+                            height: "100%",
+                            width: "100%"
                           }
-                        }, ReasonReact.element(/* None */0, /* None */0, HoverSource$ReactTemplate.make((function (r) {
-                                    return ReasonReact.element(/* None */0, /* Some */[r], Menu$ReactTemplate.make(/* None */0, /* array */[]));
-                                  }))), React.createElement("div", undefined, React.createElement("button", {
-                                  className: "Button"
-                                }, "Example button"), React.createElement("p", undefined, "Hello")));
+                        }, React.createElement("p", undefined, "Menu"));
             }),
           /* initialState */component[/* initialState */10],
           /* retainedProps */component[/* retainedProps */11],

@@ -9,7 +9,13 @@
     "webpack": "webpack -w",
     "webpack:production": "NODE_ENV=production webpack"
   },
-  "keywords": ["react", "styleguide", "prismjs", "html", "BuckleScript"],
+  "keywords": [
+    "react",
+    "styleguide",
+    "prismjs",
+    "html",
+    "BuckleScript"
+  ],
   "main": "src/HoverSource.bs.js",
   "repository": {
     "type": "git",
@@ -23,6 +29,7 @@
     "prismjs": "^1.14.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-perimeter": "https://github.com/ulrikstrid/react-perimeter.git",
     "reason-react": ">=0.3.4"
   },
   "devDependencies": {
